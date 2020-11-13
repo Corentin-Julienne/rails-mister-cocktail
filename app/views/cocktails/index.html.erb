@@ -1,0 +1,13 @@
+<h1>Bienvenue dans votre bibliothèque de cocktails !!!</h1>
+
+<% if @cocktails.count > 0 %>
+  <ul>
+    <% @cocktails.each do |cocktail| %>
+      <li><%= cocktail.name %></li>
+    <% end %>
+  </ul>
+<% else %>
+  <p>You don't have cocktails for the moment</p>
+<% end %>
+
+<%= link_to("Add a Cocktail", cocktails_new_path)  %>
