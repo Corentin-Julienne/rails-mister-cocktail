@@ -12,11 +12,12 @@ class CocktailsController < ApplicationController
     @cocktail = Cocktail.new(strong_params)
     @cocktail.save
 
-    redirect_to index_path
+    redirect_to root_path
   end
 
   def show
     @cocktail = Cocktail.find(params[:id])
+    @dose = Dose.new
   end
 
   private

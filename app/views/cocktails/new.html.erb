@@ -1,1 +1,5 @@
-<h1>test</h1>
+<%= simple_form_for @cocktail do |f| %>
+  <%= f.error_notification %>
+  <%= f.input :name, input_html: { autocomplete: 'Cocktail name' } %>
+  <%= f.submit %>
+<% end %>

@@ -4,10 +4,11 @@
   <ul>
     <% @cocktails.each do |cocktail| %>
       <li><%= cocktail.name %></li>
+      <li><%= link_to("See Details", cocktail_path(cocktail)) %></li>
     <% end %>
   </ul>
 <% else %>
   <p>You don't have cocktails for the moment</p>
 <% end %>
 
-<%= link_to("Add a Cocktail", cocktails_new_path)  %>
+<%= link_to("Add a Cocktail", new_cocktail_path)  %>
